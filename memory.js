@@ -1,3 +1,4 @@
+// eslint-disable-next-line strict
 class Memory {
   constructor() {
     this.memory = new Float64Array(1024);
@@ -45,3 +46,8 @@ class Memory {
 }
 
 module.exports = Memory;
+
+
+
+
+
