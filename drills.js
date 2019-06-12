@@ -112,6 +112,45 @@ function restProd(arr) {
 console.log(restProd([1, 3, 9, 4]))
 
 function findO(array){
-    
+    let output = [...array];
+    console.log(output)
+    array.map(row => {
+        let j = 0
+        let nrow
+            row.map(char => {
+                let column = j%row.length;
+                console.log(char)
+                console.log(column)
+                for(let i=0; i <array.length; i++){
+                    console.log(output)
+                    output[i][column] = 0;
+                }
+                j += 1;
+            })
+        nrow++
+        console.log(nrow)
+    })
+    return output
 }
+
+let testfindO = [
+    [1,0,1,1,0],
+    [0,1,1,1,0],
+    [1,1,1,1,1],
+    [1,0,1,1,1],
+    [1,1,1,1,1]
+];
+
+
+
+function checkRo(x,y){
+    for ( let i=0; i < x.length ; i++){
+        if (x === (y.slice(i) + y.slice(0,i))) {
+            return true;
+        }
+    }
+    return false;
+}
+
+console.log(checkRo('amazon','zonama'))
 
